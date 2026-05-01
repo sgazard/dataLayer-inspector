@@ -13,13 +13,17 @@ function showMeTheDataLayer(){
         ,'gtm.dom'
         ,'gtm.load'
         ,'gtm.scrollDepth'
+        ,'OneTrustLoaded'
+        ,'OptanonLoaded'
+        ,'OneTrustGroupsUpdated'
+        ,'gtm.triggerGroup'
     ];
     var elID = 'showMeTheDataLayer';
     var theID = document.getElementById(elID);
     if(!theID){
         var theID = document.createElement('div');
         theID.id=elID;
-        theID.style='position:absolute;bottom:15px;left:15px;border:1px solid red;z-index:1000000000000;padding:4px;background-color:#ecddcc;max-width:95%';
+        theID.style='position:absolute;bottom:15px;left:15px;border:1px solid red;z-index:1000000000000;padding:4px;background-color:#ecddcc;max-width:95%;max-height:95%;overflow-y:scroll;';
         document.body.appendChild(theID);
     }
 
