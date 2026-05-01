@@ -3,7 +3,7 @@ Inspecting dataLayer object on any wepages as an overlay
 
 ## how to use:
 1. creaste a bookmark of *any webpage*
-2. Edit the bookmark and replace with the source code of bookmarlet.js
+2. Edit the bookmark and *replace* with the source code of [bookmarlet.js](https://github.com/sgazard/dataLayer-inspector/blob/main/bookmarklet.js)
 
 ## Why use this?
 1. this works on a screen share with other people
