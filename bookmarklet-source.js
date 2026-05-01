@@ -42,7 +42,7 @@ function showMeTheDataLayer(){
 
 
         for( let i=0;i<datalayerLen;i++){
-            console.log(`looking at ${i}`);
+            // console.log(`looking at ${i}`);
             if(!dl.hasOwnProperty(i) ||showMeTheDataLayerignorable(dl[i].event,ignoreStrings)){continue;}
             if(dl[i].event){
                 stringInfo += `${htmlformatting.tr}${dl[i].event}</td><td>${htmlformatting.pre.replace('replace',JSON.stringify(dl[i],null,2))}</td></tr>`;
@@ -62,7 +62,7 @@ function showMeTheDataLayerignorable(index,ignoreList){
     if(ignoreList.length===0){return false;}
     for(var i=0;i<ignoreList.length;i++){
         if(index === ignoreList[i]){
-            console.log(`ignoring ${index}`);
+            // console.log(`ignoring ${index}`);
             return true;
         }
     }
