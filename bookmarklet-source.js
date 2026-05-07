@@ -10,7 +10,7 @@ function showMeTheDataLayer(){
         // to get around injecting stylesheets
         ,'style':'<style type"text/css">tr:hover{background-color:;}<style>'
     };
-    var stringInfo = `${htmlformatting.close}${htmlformatting.h1.replace('replace','dataLayer Inspector')}`;
+    var stringInfo = `${htmlformatting.close}${htmlformatting.h1.replace('replace','<a href="https://github.com/sgazard/dataLayer-inspector" target="_new" title="click here for any new versions">dataLayer Inspector</a>')}`;
     var ignoreStrings = [
         'gtm.js'
         ,'gtm.dom'
