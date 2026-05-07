@@ -13,3 +13,6 @@ Inspecting dataLayer object on any wepages as an overlay
 
 ## Screenshots 
 <img width="1106" height="721" alt="Screenshot 2026-05-01 at 12 44 35" src="https://github.com/user-attachments/assets/4e0191a7-8618-4d65-8d25-77c7c79fbfef" />
+
+## Code minification
+done using an [online tool](https://www.toptal.com/developers/javascript-minifier)
