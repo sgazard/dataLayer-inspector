@@ -1,13 +1,16 @@
 function showMeTheDataLayer(){
+    var elID = 'showMeTheDataLayer';
     var htmlformatting = {
+        'close':`<a href="#" onclick="document.getElementById('${elID}').remove()" style="float:right;" title="This may not work on sites with a strict &quot;Content Security policy&quot;">close (X)</a>`,
+        'h1':'<h1 style="color:#000;font-size:1em;margin:0 0 0.15em;line-height:1.05em">replace</h1>',
         'pre':'<pre style="font-family:courier new !important;background-color:#EEEEEE;border:1px solid #777777;color:#000000 !important;line-height:1em;margin:3px 0 0 0;font-size:0.75em;">replace</pre>'
         ,'table':'<table id="replace_id">'
         ,'thead':'<thead style="background-color:#CCddCC;">'
-        ,'tr':'<tr><td style="vertical-align:top">'
+        ,'tr':'<tr><td style="vertical-align:top;color:black;">'
         // to get around injecting stylesheets
         ,'style':'<style type"text/css">tr:hover{background-color:;}<style>'
     };
-    var stringInfo = `${htmlformatting.pre.replace('replace','dataLayer Inspector')}`;
+    var stringInfo = `${htmlformatting.close}${htmlformatting.h1.replace('replace','dataLayer Inspector')}`;
     var ignoreStrings = [
         'gtm.js'
         ,'gtm.dom'
@@ -18,12 +21,12 @@ function showMeTheDataLayer(){
         ,'OneTrustGroupsUpdated'
         ,'gtm.triggerGroup'
     ];
-    var elID = 'showMeTheDataLayer';
+
     var theID = document.getElementById(elID);
     if(!theID){
         var theID = document.createElement('div');
         theID.id=elID;
-        theID.style='position:absolute;bottom:15px;left:15px;border:1px solid red;z-index:1000000000000;padding:4px;background-color:#ecddcc;max-width:95%;max-height:95%;overflow-y:scroll;';
+        theID.style='position:fixed;bottom:15px;left:15px;border:1px solid red;z-index:1000000000000;padding:4px;background-color:#ecddcc;max-width:95%;max-height:95%;overflow-y:scroll;border-radius:7px !important;box-shadow: 4px 4px 8px grey !important;';
         document.body.appendChild(theID);
     }
 
